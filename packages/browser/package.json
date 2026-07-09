@@ -1,0 +1,42 @@
+{
+  "name": "@caitun/lc3",
+  "version": "0.1.0",
+  "description": "Browser LC3 encoder and decoder powered by liblc3 WebAssembly.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/caitunai/lc3#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caitunai/lc3.git",
+    "directory": "packages/browser"
+  },
+  "bugs": {
+    "url": "https://github.com/caitunai/lc3/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./wasm/lc3-wasm.js": "./dist/wasm/lc3-wasm.js",
+    "./wasm/lc3-wasm.wasm": "./dist/wasm/lc3-wasm.wasm"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:js && npm run build:wasm",
+    "build:js": "sh scripts/build-js.sh",
+    "build:wasm": "sh scripts/build-wasm.sh",
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "lc3",
+    "codec",
+    "audio",
+    "wasm",
+    "webaudio"
+  ]
+}
