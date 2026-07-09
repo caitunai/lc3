@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: '24'
       - name: Install Emscripten
-        uses: mymindstorm/setup-emsdk@v15
+        uses: emscripten-core/setup-emsdk@v16
       - run: npm run build
         working-directory: packages/browser
       - run: npm test
@@ -59,7 +59,7 @@ jobs:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
       - name: Install Emscripten
-        uses: mymindstorm/setup-emsdk@v15
+        uses: emscripten-core/setup-emsdk@v16
       - name: Verify package version matches tag
         working-directory: packages/browser
         run: node -e "const pkg=require('./package.json'); const tag=process.env.GITHUB_REF_NAME.replace(/^v/,''); if (pkg.version !== tag) { throw new Error(`package version ${pkg.version} does not match tag ${tag}`); }"
