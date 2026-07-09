@@ -1,6 +1,6 @@
 {
   "name": "@caitun/lc3",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Browser LC3 encoder and decoder powered by liblc3 WebAssembly.",
   "type": "module",
   "license": "MIT",

@@ -132,8 +132,7 @@ cd packages/browser
 npm version 0.1.0 --no-git-tag-version
 ```
 
-The publishing job requires the repository secret `NPM_TOKEN` with permission to
-publish `@caitun/lc3`. The workflow runs:
+The publishing job:
 
 ```bash
 npm run build
