@@ -5,7 +5,7 @@ Go and browser LC3 encoder/decoder packages backed by Google `liblc3`.
 This repository publishes two artifacts from one source tree:
 
 - Go module: `github.com/caitunai/lc3`
-- npm package: `@caitunai/lc3`
+- npm package: `@caitun/lc3`
 
 The bundled `liblc3` source lives in `internal/csrc/liblc3`, so users installing the Go module do not need git submodules.
 
@@ -66,13 +66,13 @@ The Go package uses cgo. With `CGO_ENABLED=0`, constructors return `ErrInit` and
 Install:
 
 ```bash
-npm install @caitunai/lc3
+npm install @caitun/lc3
 ```
 
 Use:
 
 ```js
-import { LC3Encoder, LC3Decoder } from '@caitunai/lc3'
+import { LC3Encoder, LC3Decoder } from '@caitun/lc3'
 
 const encoder = await LC3Encoder.create({
   sampleRate: 16000,
@@ -132,8 +132,8 @@ cd packages/browser
 npm version 0.1.0 --no-git-tag-version
 ```
 
-The publish job requires the repository secret `NPM_TOKEN` with permission to
-publish `@caitunai/lc3`. The workflow runs:
+The publishing job requires the repository secret `NPM_TOKEN` with permission to
+publish `@caitun/lc3`. The workflow runs:
 
 ```bash
 npm run build
